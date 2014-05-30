@@ -1,0 +1,7 @@
+[user]
+	name = Phil Rigovanov
+	email = phil@rigovanov.ru
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/phil/.gitignore_global
