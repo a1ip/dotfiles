@@ -15,3 +15,11 @@ Icon
 
 fish_history
 fishd.*
+
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~

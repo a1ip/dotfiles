@@ -30,12 +30,53 @@ Plugin 'gmarik/Vundle.vim'
 " Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
 
-Bundle 'dag/vim-fish'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdtree'
-Bundle 'slim-template/vim-slim'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'dag/vim-fish'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdtree'
+Plugin 'slim-template/vim-slim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/powerline'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'bling/vim-bufferline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'moll/vim-node'
+Plugin 'tpope/vim-rails'
+Plugin 'godlygeek/tabular'
+Plugin 'walm/jshint.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'wavded/vim-stylus'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+Plugin 'goatslacker/mango.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+Bundle 'mileszs/ack.vim'
+Plugin 'marcus/vim-mustang'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Bundle 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Slava/tern-meteor'
+Plugin 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-rake'
+Plugin 'csexton/jekyll.vim'
+Plugin 'parkr/vim-jekyll'
+Plugin 'marijnh/tern_for_vim'
+Bundle 'Yggdroot/indentLine'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/unite.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,3 +97,19 @@ filetype plugin indent on    " required
 syntax enable
 
 color jellybeans
+
+let g:airline_powerline_fonts = 1
+
+set list
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+set tabstop=2
+set laststatus=2
+set cursorline
+set cursorcolumn
+set clipboard=unnamed
+let g:mustache_abbreviations = 1

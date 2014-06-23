@@ -1,7 +1,10 @@
 " MacVim GUI mode
 if has("gui_macvim")
   "set guifont=Bitstream\ Vera\ Sans\ Mono:h24
-  set guifont=Monaco:h24
+  "set guifont=Monaco:h24
+  set guifont=Ubuntu\ Mono\ derivative\ Powerline:h36
+  "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h30
+  "set guifont=Liberation\ Mono\ for\ Powerline:h30
   set guioptions=aAce
   set fuoptions=maxvert,maxhorz
   set noballooneval
