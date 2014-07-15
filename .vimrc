@@ -113,3 +113,7 @@ set cursorline
 set cursorcolumn
 set clipboard=unnamed
 let g:mustache_abbreviations = 1
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab

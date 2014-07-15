@@ -23,3 +23,4 @@ fishd.*
 Session.vim
 .netrwhist
 *~
+.tern-project
