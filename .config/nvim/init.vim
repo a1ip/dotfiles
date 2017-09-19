@@ -79,7 +79,7 @@ Plugin 'marijnh/tern_for_vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
-
+Bundle 'lyokha/vim-xkbswitch'
 "Plugin 'Slava/tern-meteor'
 
 " All of your Plugins must be added before the following line
