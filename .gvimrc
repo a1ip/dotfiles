@@ -2,12 +2,22 @@
 if has("gui_macvim")
   "set guifont=Bitstream\ Vera\ Sans\ Mono:h24
   "set guifont=Monaco:h24
-  set guifont=Ubuntu\ Mono\ derivative\ Powerline:h36
+  "set guifont=Ubuntu\ Mono\ derivative\ Powerline:h36
   "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h30
   "set guifont=Liberation\ Mono\ for\ Powerline:h30
+  set macligatures
+  set guifont=Fira\ Code:h32
   set guioptions=aAce
   set fuoptions=maxvert,maxhorz
   set noballooneval
+  "syntax on
+  "set autoindent
+  "set smartindent
+  "set tabstop=2
+  "set shiftwidth=2
+  "set expandtab
+  "set encoding=utf-8
+  "set fileencoding=utf-8
 
   " resize current buffer by +/- 5
   nnoremap <M-Right> :vertical resize +5<CR>

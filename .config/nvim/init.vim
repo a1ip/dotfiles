@@ -71,7 +71,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Bundle 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
-"Plugin 'Slava/tern-meteor'
 Plugin 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-rake'
 Plugin 'csexton/jekyll.vim'
@@ -80,6 +79,8 @@ Plugin 'marijnh/tern_for_vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
+
+"Plugin 'Slava/tern-meteor'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -121,27 +122,7 @@ syntax on
 
 color jellybeans
 
-nnoremap <Leader>a :Ack!<Space>
-"let g:ackprg = 'ag --nogroup --nocolor --column'
-"let g:ackprg = 'ag --vimgrep --smart-case'
-"if executable('ag')
-"  let g:ackprg = 'ag --nogroup --nocolor --column'
-"  set grepprg=ag\ --vimgrep\ $*
-"  set grepformat=%f:%l%c%m
-"endif
-"cnoreabbrev ag Ack
-"cnoreabbrev aG Ack
-"cnoreabbrev Ag Ack
-"cnoreabbrev AG Ack 
-
 let g:airline_powerline_fonts = 1
-
-" change the mapleader from \ to ,
-let mapleader=","
-
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set list
 " Shortcut to rapidly toggle `set list`
@@ -159,7 +140,27 @@ map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
 nnoremap <silent> <bs> <C-w><Left>
 
-let g:XkbSwitchLib = '/usr/local/bin/xkbswitch'¬
+" change the mapleader from \ to ,
+let mapleader=","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+nnoremap <Leader>a :Ack!<Space>
+"let g:ackprg = 'ag --nogroup --nocolor --column'
+"let g:ackprg = 'ag --vimgrep --smart-case'
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l%c%m
+endif
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
+let g:XkbSwitchLib = '/usr/local/bin/xkbswitch'
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
 
