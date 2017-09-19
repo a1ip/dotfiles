@@ -160,7 +160,9 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
-let g:XkbSwitchLib = '/usr/local/bin/xkbswitch'
+"let g:XkbSwitchLib = '/usr/local/bin/xkbswitch'
+let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
 
