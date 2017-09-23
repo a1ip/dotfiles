@@ -162,9 +162,18 @@ cnoreabbrev AG Ack
 
 "let g:XkbSwitchLib = '/usr/local/bin/xkbswitch'
 let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
-let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+"let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+"let g:XkbSwitchLib = '/usr/local/bin/issw'
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
+"let g:XkbSwitchIMappingsTrData = $HOME.'/config/xkbswitch/xkbswitch.tr'
+let g:XkbSwitchIMappingsTr = {
+          \ 'ru':
+          \ {'<': 'qwertyuiop[]asdfghjkl;''zxcvbnm,.`/'.
+          \       'QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>?~@#$^&|',
+          \  '>': 'йцукенгшщзхъфывапролджэячсмитьбюё.'.
+          \       'ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ,Ё"№;:?/'},
+          \ }
 
 set laststatus=2
 set cursorline
