@@ -1,2 +1,5 @@
+[record]
+command = /usr/local/bin/fish -l
+
 [api]
 token = d46f1b22-47e8-4f9e-9a80-94bf687012f6

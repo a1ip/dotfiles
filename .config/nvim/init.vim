@@ -75,12 +75,11 @@ Plugin 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-rake'
 Plugin 'csexton/jekyll.vim'
 Plugin 'parkr/vim-jekyll'
-Plugin 'marijnh/tern_for_vim'
+"Plugin 'marijnh/tern_for_vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'lyokha/vim-xkbswitch'
-"Plugin 'Slava/tern-meteor'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,10 +95,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"
-" set langmap=йцукенгшщзхъфывапролджэёячсмитьбю/ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЁЯЧСМИТЬБЮ/;qwertyuiop[]asdfghjkl;'\zxcvbnm,./QWERTYUIOP[]ASDFGHJKL:'|ZXCVBNM,./
-
-" set langmap=><!\\"№%:\\,.\\;йцукенгшщзхъфывапролджэё]ячсмитьбюЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЁ[ЯЧСМИТЬБЮ;§±!@#$%^&*qwertyuiop[]asdfghjkl\\;'\\\`zxcvbnm\\,.QWERTYUIOP{}ASDFGHJKL:\\"|~ZXCVBNM<>
 
 " Enable seeing-is-believing mappings only for Ruby
 augroup seeingIsBelievingSettings
@@ -131,7 +126,6 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
-map <C-n> :NERDTreeToggle<CR>
 
 " Map ctrl-movement keys to window switching
 map <C-k> <C-w><Up>
@@ -146,10 +140,8 @@ let mapleader=","
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
+noremap <Leader>w :w<CR>
 nnoremap <Leader>a :Ack!<Space>
-"let g:ackprg = 'ag --nogroup --nocolor --column'
-"let g:ackprg = 'ag --vimgrep --smart-case'
 if executable('ag')
   let g:ackprg = 'ag --nogroup --nocolor --column'
   set grepprg=ag\ --vimgrep\ $*
@@ -160,13 +152,15 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
-"let g:XkbSwitchLib = '/usr/local/bin/xkbswitch'
+"map <C-n> :NERDTreeToggle<CR>
+"nnoremap <Leader>n :NERDTreeToggle<CR>
+nmap <F12> :NERDTreeToggle<cr>
+vmap <F12> <esc>:NERDTreeToggle<cr>
+imap <F12> <esc>:NERDTreeToggle<cr>
+
 let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
-"let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
-"let g:XkbSwitchLib = '/usr/local/bin/issw'
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
-"let g:XkbSwitchIMappingsTrData = $HOME.'/config/xkbswitch/xkbswitch.tr'
 let g:XkbSwitchIMappingsTr = {
           \ 'ru':
           \ {'<': 'qwertyuiop[]asdfghjkl;''zxcvbnm,.`/'.
