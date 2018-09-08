@@ -1,0 +1,14 @@
+regexp=^\s{8}\s*-- (.*)$
+colours=,bold black on_green
+count=once
+========
+regexp=-- 
+replace=—— 
+========
+regexp=^\S+
+colours=bold green
+count=block
+========
+regexp=^$
+colours=default
+count=unblock
