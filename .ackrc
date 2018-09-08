@@ -1,0 +1,28 @@
+--type-add=css=.sass,.less,.scss
+--type-add=ruby=.rake,.rsel,.builder,.thor
+--type-add=html=.haml,.html.erb,.html.haml
+--type-add=js=.js.erb,.coffee
+--type-set=cucumber=.feature
+--type-set=c=.c,.cpp,.ino,.pde,.h
+# Don't even bother with some directories
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=coverage
+--ignore-dir=public/assets
+--ignore-dir=spec/cassettes
+--ignore-dir=features/cassettes
+# all-lower-case is case-insensitive, otherwise it's case sensitive
+--smart-case
+# sort the files for easier viewing
+--sort-files
+# colors
+--color
+--color-filename=blue
+--color-lineno=green
+--color-match=yellow
+# show the context of the found item
+--context
+--follow
+--group
