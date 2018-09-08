@@ -1,2 +1,2 @@
 . ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -31,14 +31,14 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 Plugin 'tpope/vim-sensible'
-Plugin 'bling/vim-airline'
 Plugin 'dag/vim-fish'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'slim-template/vim-slim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'Lokaltog/powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-bufferline'
 Plugin 'altercation/vim-colors-solarized'
@@ -52,7 +52,8 @@ Plugin 'moll/vim-node'
 Plugin 'tpope/vim-rails'
 Plugin 'godlygeek/tabular'
 Plugin 'walm/jshint.vim'
-Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'wavded/vim-stylus'
@@ -75,11 +76,13 @@ Plugin 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-rake'
 Plugin 'csexton/jekyll.vim'
 Plugin 'parkr/vim-jekyll'
-"Plugin 'marijnh/tern_for_vim'
+Plugin 'ternjs/tern'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'lyokha/vim-xkbswitch'
+Plugin '/usr/local/opt/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -112,12 +115,23 @@ augroup seeingIsBelievingSettings
 augroup END
 
 
-" syntax enable
-syntax on
+syntax enable
+"syntax on
 
 color jellybeans
+"color monokai
+"color neodark
 
 let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.space = "\ua0"
+let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
+let g:airline_skip_empty_sections = 1
+
+let g:airline_theme='murmur'
 
 set list
 " Shortcut to rapidly toggle `set list`
@@ -169,6 +183,9 @@ let g:XkbSwitchIMappingsTr = {
           \       'ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ,Ё"№;:?/'},
           \ }
 
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 set laststatus=2
 set cursorline
 set cursorcolumn
@@ -179,3 +196,13 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+" Change current directory to current file
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+" Automaticaly change current working directory of this window to current file location
+autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
+" Display a vertical line at an arbitrary column width
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
+endif

@@ -1,3 +1,12 @@
 package foreign-env
+package fzf
+package grc
+package https://github.com/edc/bass
 package nvm
+package pisces
+package pyenv
 theme default
+theme es
+theme hulk
+theme pure
+theme will
