@@ -7,6 +7,5 @@ package pisces
 package pyenv
 theme default
 theme es
-theme hulk
 theme pure
 theme will
